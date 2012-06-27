@@ -24,6 +24,7 @@ In order to run the language detection module go to the scripts folder and run
 This will rank a subset of 23 languages with the most likely language first.   This is the result 
 
 E.g. 
+
     ./language_detect.sh "I really think this should work" 3 1000 | sort -k 2 -n
  
 Should output something like
