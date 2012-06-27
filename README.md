@@ -19,6 +19,6 @@ Run
 
 In order to run the language detection module go to the scripts folder and run 
 
-    ./language_detect.sh "Jien tifel intelligenti" 3 1000 | sort -k 2 -n
+    ./language_detect.sh "I really think this should work" 3 1000 | sort -k 2 -n
  
 This will rank a subset of 23 languages with the most likely language first.   
