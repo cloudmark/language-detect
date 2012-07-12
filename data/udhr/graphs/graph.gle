@@ -1,0 +1,25 @@
+size 80 15
+
+set font texcmr
+
+sub background
+	amove xg(xgmin) yg(ygmin)
+	local wd = xg(xgmax)-xg(xgmin)
+	local hi = yg(ygmax)-yg(ygmin)
+	colormap y 0 0 0.8 1 1 200 wd hi
+end sub
+
+begin graph
+   title  "Universal Declaration of Human Rights"
+   ytitle "Language"
+   xtitle "Average Words Per Sentence"
+   scale auto
+   xaxis min -1 max 281 dticks 1 angle 60
+   yaxis dticks 5 
+   yaxis grid
+   yticks color grey50 lstyle 2 
+   data   "../stats/word_sentence2.dat"
+   xnames from d1
+   bar d4 pattern shade1 fill orange
+end graph
+
