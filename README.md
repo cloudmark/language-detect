@@ -17,14 +17,15 @@ In general a string of length k, padded with blanks, will have k + 1 bi-grams, k
 # How does this all work?
 
 Human language has some words which occur more than others. For example you can imagine that in a document the word the will occur more frequently than the word aardvark. More over there is always a small set of words which dominates most of the language in terms of frequency of use. This is true both for words in a particular language and also for words in a particular category. Thus words which appear in a sporty document will be different from the words that appear in a political document and words which are in the English language will obviously be different from words which are in the French language.
-Well it turns out that these small fragments of words (N-grams) also obey (approximately) the same property. Thus given a document in a particular language we will always find a set of N-grams which dominate2 and these set of N-grams will be different for each language. Since we are using small fragments of text we are not very susceptible to noise making our detection more resilient.
+Well it turns out that these small fragments of words (N-grams) also obey (approximately) the same property. Thus given a document in a particular language we will always find a set of N-grams which dominate and these set of N-grams will be different for each language. Since we are using small fragments of text we are not very susceptible to noise making our detection more resilient.
 
 # Pre-processing
 
 Generation of the language profiles is easy. Given an input document the following steps need to be performed.
 
 * Split the input document into separate tokens consisting only of letters and apostrophes. Digits and punctuation should be discarded.
-Remove any extra spacing and make sure that there is always a letter before a punctuation mark. Thus a. is good while a . is bad
+
+* Remove any extra spacing and make sure that there is always a letter before a punctuation mark. Thus a. is good while a . is bad
 
 * Spit the document into three parts; train, validation and test in the ratio 0.7, 0.2, and 0.1 respectively. Put the partitioned document into three separate folders; train, validate and test. 
   
@@ -53,8 +54,10 @@ The out-of-place rank would be 0 + 2 + 0 + K + 3 + 17. K represents a fixed cost
 In order to classify a sample document we compute the overall distance measure between the document profile and the language profile for each language using the out-of-place measure and then pick the language which has the smallest difference. Alternatively we could also rank them and give the ranked results to the user.
 
 # Setup 
- * Bash >= 4
- * Awk
+ * Bash >= 4 (Current)
+ * Awk (Current)
+ * Python (Future)
+ * SQLAlchemy (Future)
 
 
 # Run
