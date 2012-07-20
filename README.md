@@ -1,6 +1,6 @@
 # Language Detection
 
-> Text Adapted from [here](http://www.lrec-conf.org/proceedings/lrec2010/pdf/279_Paper.pdf), It is meant to give the necessary context to understand what is happening and well as a valid implementation. The system is based on calculating and comparing language profiles of N-gram frequencies. First we use the system to compute N-gram profiles on training data files written in target languages - language profiles. Given a novel document we want to classify, we compute the N-gram profile of this document document profile and compute the distance between the document and language profiles.
+> Text Adapted from [here](http://www.lrec-conf.org/proceedings/lrec2010/pdf/279_Paper.pdf)
 
 This project will outline an N-Gram based language detection using the rank order method described [here](http://www.lrec-conf.org/proceedings/lrec2010/pdf/279_Paper.pdf), It is meant to give the necessary context to understand what is happening and well as a valid implementation. The system is based on calculating and comparing language profiles of N-gram frequencies. First we use the system to compute N-gram profiles on training data files written in target languages - language profiles. Given a novel document we want to classify, we compute the N-gram profile of this document document profile and compute the distance between the document and language profiles.
 
